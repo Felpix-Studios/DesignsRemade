@@ -1,0 +1,137 @@
+@font-face { font-family: Druk; src: url('../peterdimitrov/assets/DrukCond-Super-Cy-Gr-Web.ttf'); } 
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;400&display=swap');
+
+*{
+    box-sizing: border-box;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #e4e5e7;
+    color:#1d1d1d;
+    min-height: 100%;
+    display: block;
+    font-family: "Mulish", sans-serif;
+    font-size: 3em;
+}
+
+.hero-grid{
+    display: grid;
+    height: 100vh;
+    padding: .625em .625em .1em;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 0px;
+    grid-template-columns: 1.25fr 1fr;
+    grid-template-rows: max-content;
+}
+
+.name{
+    font-family: "Druk";
+    text-transform: uppercase;
+    line-height: .8;
+    overflow:hidden;
+    font-size: calc(20px + (210 - 20) * ((100vw - 300px) / (1600 - 300)));
+    letter-spacing: calc(0px + (-16 - 0) * ((100vw - 300px) / (1600 - 300)));
+    display:block;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    position: relative;
+    grid-column-start: span 2;
+    grid-row-start: span 1;
+    grid-column-end: span 2;
+    grid-row-end: span 1;
+}
+
+.grid-title{
+    line-height: .8;
+    margin: 0;
+}
+
+.title-letter{
+    display:inline-block;
+}
+
+.time{
+    position: relative;
+    display:flex;
+
+}
+
+.links{
+    justify-self: start;
+    align-self: end;
+}
+.project-container{
+    font-weight: 400;
+    line-height: 36px;
+}
+.project{
+    position: relative;
+    display:inline-block
+}
+.project a{
+    text-decoration: none;
+    color: #1d1d1d;    
+    padding-right: 1em;
+    transition: opacity 1.5s cubic-bezier(.23, 1, .32, 1);
+    background-color: transparent;
+    max-width: 100%;
+    cursor:pointer;
+}
+.project-year{
+    font-size: 12px;
+}
+.project-name{
+    font-size: 40px;
+}
+.project-slash{
+    font-size: 40px;
+}
+.inline{
+    display: inline-block;
+}
+
+.socials{
+    justify-self: end;
+    align-self: end;
+    display: flex;
+    padding-bottom: 0.525rem;
+    align-items: center;
+}
+.socials a{
+        position: relative;
+        overflow: hidden;
+        padding: .2em .9375em .1em;
+        border: 1px solid #1d1d1d;
+        border-radius: 100px;
+        color: #1d1d1d;
+        font-size: .75em;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+}
+.btn-txt{
+    display: block;
+    z-index: 5;
+}
+.btn-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    color:#e4e5e7;
+    border-radius:100px;
+    background-color: #1d1d1d;
+    transform: translate3d(0px, 100%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+}
+.socials a:hover .btn-bg{
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);  
+}
+.socials a:hover {
+    color: #e4e5e7;
+}
