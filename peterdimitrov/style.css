@@ -84,10 +84,11 @@ body{
     font-size: 12px;
 }
 .project-name{
-    font-size: 40px;
+    font-size: calc(24px + (40 - 20) * ((100vw - 300px) / (1600 - 300)));
 }
 .project-slash{
-    font-size: 40px;
+    font-size: calc(24px + (40 - 20) * ((100vw - 300px) / (1600 - 300)));
+    
 }
 .inline{
     display: inline-block;
@@ -133,5 +134,5 @@ body{
     transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);  
 }
 .socials a:hover {
-    color: #e4e5e7;
+    color: #e4e5e7 !important;
 }
