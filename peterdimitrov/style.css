@@ -3,7 +3,6 @@
 
 *{
     box-sizing: border-box;
-    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 body{
     margin: 0;
@@ -14,6 +13,7 @@ body{
     display: block;
     font-family: "Mulish", sans-serif;
     font-size: 3em;
+    overflow: hidden;
 }
 
 .hero-grid{
@@ -116,6 +116,8 @@ body{
 .btn-txt{
     display: block;
     z-index: 5;
+    position: relative;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .btn-bg{
     position: absolute;
@@ -128,11 +130,38 @@ body{
     border-radius:100px;
     background-color: #1d1d1d;
     transform: translate3d(0px, 100%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-        transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .socials a:hover .btn-bg{
     transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);  
 }
 .socials a:hover {
+
     color: #e4e5e7 !important;
+}
+
+.bg-hero{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate(-100%, -100%) scale(3); 
+}
+
+/* make the bg-hero appear when .project a is hovered*/
+.project a:hover ~ .bg-hero{
+    transition: cubic-bezier(.61,.36,.59,.85) 1s !important;
+    opacity: 1;
+}
+/* when .project a is hovered, change the text color for all the other text on the page */
+
+.bg-hero-img img{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
