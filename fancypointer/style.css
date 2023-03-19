@@ -1,29 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600&display=swap');
+
 body{
     margin: 0;
     padding: 0;
     background: #1d1d1d;
     cursor: none;
+    overflow: hidden;
+    font-family: 'Golos Text', sans-serif;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .container{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem 2rem;
+    overflow: hidden;
 }
 .container a{
     color: white;
     text-decoration: none;
-    font-family: sans-serif;
     cursor: none;
+    padding: 10px 16px;
 }
 
 .cursor-outer{
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 0px;
-    left: 0px;
+    top: -16px;
+    left: -16px;
     width: 16px;
     height: 16px;
     background: rgba(255, 255, 255, 0);
@@ -32,5 +40,20 @@ body{
     z-index: 100;
     pointer-events: none;
     cursor:none;
-    transition: 240ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: 200ms cubic-bezier(0.175, 0.885, 0.87, 1.15);
+}
+
+.button{
+    padding: 8px 16px;
+    background-color: #318C76;
+    margin-bottom: 10px;
+    border-radius: 16px;
+    box-shadow: 0px 5px #1e503e;
+    transition: 200ms cubic-bezier(0.175, 0.885, 0.87, 1.15);
+}
+
+.button:active{
+    background-color: #1e503e;
+    box-shadow: 0px 2px #1e503e;
+    transform: translateY(3px);
 }
