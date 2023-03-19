@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    background: #fafafa;
+    color: #1d1d1d;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+
+@media screen and (max-width: 1000px) {
+    .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
