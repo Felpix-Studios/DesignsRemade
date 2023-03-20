@@ -6,7 +6,7 @@ const cursorInner = document.querySelector('.cursor-inner');
 document.addEventListener('DOMContentLoaded', () => {
     cursorOuter.style.top = e.pageY - 8 + "px";
 	cursorOuter.style.left = e.pageX - 8 + "px";
-    cursorOuter.style.transform = "scale(1.5)";
+    cursorOuter.style.transform = "scale(1.25)";
     cursorOuter.style.transform = "scale(1)";
 });
 
@@ -18,7 +18,7 @@ document.addEventListener('mousemove', e => {
 
 //on mouse pressed down
 document.addEventListener('mousedown', () => {
-    cursorOuter.style.transform = 'scale(1.5)';
+    cursorOuter.style.transform = 'scale(1.25)';
 });
 
 //on mouse released
@@ -29,7 +29,7 @@ document.addEventListener('mouseup', () => {
 //on mouse hover over a link
 document.querySelectorAll('a').forEach(link => {
     link.addEventListener('mouseover', () => {
-        cursorOuter.style.transform = 'scale(1.5)';
+        cursorOuter.style.transform = 'scale(1.25)';
     });
     link.addEventListener('mouseout', () => {
         cursorOuter.style.transform = 'scale(1)';
@@ -39,7 +39,7 @@ document.querySelectorAll('a').forEach(link => {
 //on mouse over over a class .button
 document.querySelectorAll('.button').forEach(link => {
     link.addEventListener('mouseover', () => {
-        cursorOuter.style.transform = 'scale(1.5)';
+        cursorOuter.style.transform = 'scale(1.25)';
     });
     link.addEventListener('mouseout', () => {
         cursorOuter.style.transform = 'scale(1)';
@@ -56,5 +56,17 @@ document.querySelectorAll('input').forEach(link => {
         cursorOuter.style.width = '16px';
         cursorOuter.style.height = '16px';
         cursorOuter.style.borderRadius = '50%';
+    });
+});
+
+//on mouse over of ID #not-allowed
+document.querySelectorAll('#not-allowed').forEach(link => {
+    link.addEventListener('mouseover', () => {
+        cursorOuter.style.backgroundImage = "url('/DesignsRemade/fancypointer/assets/cross.svg')";
+        cursorOuter.style.border = "none";
+    });
+    link.addEventListener('mouseout', () => {
+        cursorOuter.style.backgroundImage = "none";
+        cursorOuter.style.border = "1px solid #fff";
     });
 });

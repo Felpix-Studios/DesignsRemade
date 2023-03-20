@@ -10,6 +10,8 @@ body{
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    font-size: 16px;
+    color: white;
 }
 .container{
     width: 100vw;
@@ -41,10 +43,14 @@ body{
     pointer-events: none;
     cursor:none;
     transition: 200ms cubic-bezier(0.175, 0.885, 0.87, 1.15);
+    background-size:contain;
 }
 
 .button{
-    padding: 10px 16px;
+    color: white;
+    text-decoration: none;
+    cursor: none;
+    padding: 10px 32px !important;
     background-color: #318C76;
     margin-bottom: 15px;
     border-radius: 16px;
