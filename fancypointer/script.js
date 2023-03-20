@@ -35,3 +35,26 @@ document.querySelectorAll('a').forEach(link => {
         cursorOuter.style.transform = 'scale(1)';
     });
 });
+
+//on mouse over over a class .button
+document.querySelectorAll('.button').forEach(link => {
+    link.addEventListener('mouseover', () => {
+        cursorOuter.style.transform = 'scale(1.5)';
+    });
+    link.addEventListener('mouseout', () => {
+        cursorOuter.style.transform = 'scale(1)';
+    });
+});
+
+document.querySelectorAll('input').forEach(link => {
+    link.addEventListener('mouseover', () => {
+        cursorOuter.style.width = '8px';
+        cursorOuter.style.height = '24px';
+        cursorOuter.style.borderRadius = '4px';
+    });
+    link.addEventListener('mouseout', () => {
+        cursorOuter.style.width = '16px';
+        cursorOuter.style.height = '16px';
+        cursorOuter.style.borderRadius = '50%';
+    });
+});
